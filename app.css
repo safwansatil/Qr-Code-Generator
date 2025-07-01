@@ -1,0 +1,214 @@
+.background {
+    background: #f8f9fa;
+    min-height: 100vh;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+.header {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0 1rem 0;
+    background: transparent;
+}
+
+.hello-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #222;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    letter-spacing: 0.01em;
+    background: none;
+    border: none;
+    margin: 0;
+}
+
+.loading-dots {
+    display: inline-block;
+    width: 2em;
+    height: 1em;
+    position: relative;
+}
+
+.loading-dots::before,
+.loading-dots::after,
+.loading-dots span {
+    content: '';
+    display: inline-block;
+    width: 0.4em;
+    height: 0.4em;
+    background: #f02957;
+    border-radius: 50%;
+    position: absolute;
+    animation: loading-bounce 1.2s infinite both;
+}
+
+.loading-dots::before {
+    left: 0;
+    animation-delay: 0s;
+}
+
+.loading-dots span {
+    left: 0.7em;
+    animation-delay: 0.2s;
+}
+
+.loading-dots::after {
+    left: 1.4em;
+    animation-delay: 0.4s;
+}
+
+@keyframes loading-bounce {
+
+    0%,
+    80%,
+    100% {
+        transform: scale(0.7);
+        opacity: 0.5;
+    }
+
+    40% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.container.minimal-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.07);
+    padding: 2.5rem 2rem 2rem 2rem;
+    max-width: 350px;
+    margin: 2rem auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+#desc {
+    color: #444;
+    font-size: 1.05rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.minimal-input {
+    width: 100%;
+    min-width: 340px;
+    padding: 1.1em 1.2em;
+    border-radius: 8px;
+    border: 1.5px solid #e0e0e0;
+    background: #fafbfc;
+    font-size: 1.13rem;
+    color: #222;
+    margin-bottom: 0.5em;
+    transition: border 0.2s;
+    box-shadow: none;
+    resize: vertical;
+    min-height: 3.2em;
+    max-height: 8em;
+    line-height: 1.5;
+    overflow-y: auto;
+    font-family: inherit;
+}
+
+.minimal-input::placeholder {
+    color: #bdbdbd;
+    opacity: 1;
+    white-space: pre-line;
+    word-break: break-word;
+}
+
+.minimal-input:focus {
+    border: 1.5px solid #f02957;
+    outline: none;
+    background: #fff;
+}
+
+.minimal-btn {
+    width: 100%;
+    padding: 0.8em 1em;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(90deg, #f02957 0%, #ffb6b9 100%);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(240, 41, 87, 0.07);
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.minimal-btn:hover {
+    background: linear-gradient(90deg, #ffb6b9 0%, #f02957 100%);
+    box-shadow: 0 4px 16px rgba(240, 41, 87, 0.13);
+}
+
+#img {
+    width: 180px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    max-height: 0;
+    overflow: hidden;
+    background: #fafbfc;
+    margin-bottom: 0.5em;
+    transition: max-height 0.2s cubic-bezier(.4, 2, .6, 1), box-shadow 0.2s;
+    border: 1.5px solid #e0e0e0;
+}
+
+#img img {
+    width: 100%;
+    padding: 10px;
+}
+
+#img.show-img {
+    max-height: 220px;
+    overflow: visible;
+    margin: 10px auto;
+    box-shadow: 0 4px 16px rgba(240, 41, 87, 0.13);
+    border: 1.5px solid #f02957;
+}
+
+.error {
+    color: #f02957;
+    font-size: 14px;
+    margin-top: 10px;
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.minimal-footer {
+    text-align: center;
+    margin-top: 2.5rem;
+    color: #bdbdbd;
+    font-size: 13px;
+    letter-spacing: 0.01em;
+    background: none;
+    border: none;
+    padding-bottom: 1.5rem;
+}
