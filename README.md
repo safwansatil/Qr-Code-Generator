@@ -21,3 +21,11 @@ A clean and minimal web app to instantly generate QR codes from any text or URL.
 - CSS (custom + Bootstrap)  
 - JavaScript  
 - [QRServer API](https://goqr.me/api/)
+
+## 💬 Reach Out
+
+Open to feedback, suggestions, or constructive criticism!  
+Feel free to connect, collaborate, or let me know how I can improve.
+
+📧 asf1k.til@gmail.com  
+🌐 [GitHub](https://www.github.com/safwansatil)
